@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Rest Exercise Person</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <h1>Rest Exercise Person</h1>
+        <div id ="display"></div>
+        <table id="TablePersons">
+            <thead>
+                <!--<tr><th>ID</th><th>First name</th><th>Last name</th><th>Phone number</th></tr>-->
+            </thead>
+            <tbody id ="TablePersonsBody">
+            </tbody>
+        </table>
+
+        <input id="PersonsRefresh" type="button" value="Persons refresh" /><br /><br />        
+        <label>Id: </label><input id="PersonID" type="text" /><br /><br />
+        <label>First name: </label><input id="PersonFirstName" type="text" /><br /><br />
+        <label>Last name: </label><input id="PersonLastName" type="text" /><br /><br />
+        <label>Phone number: </label><input id="PersonPhoneNumber" type="text" /><br /><br />
+
+        <input id="PersonAdd" type="button" value="Create new person" />
+        <input id="PersonEdit" type="button" value="Edit person" />
+        <input id="PersonDelete" type="button" value="Delete person" />
+    </body>
+</html>
