@@ -14,7 +14,7 @@ public class DeploymentConfiguration implements ServletContextListener{
     {
         Map<String, String> env = System.getenv();
         if(env.keySet().contains("DODeployment")){
-            PU_NAME = "PU_DO";
+            PU_NAME = "PU";
         }
     }
 

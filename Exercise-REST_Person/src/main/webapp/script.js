@@ -1,4 +1,4 @@
-PersonsRefresh();
+//PersonsRefresh();
 
 document.getElementById("PersonsRefresh").addEventListener("click", function ()
 {
@@ -42,7 +42,7 @@ function PersonsRefresh()
                     rows += '<td>' + json[i].lName + '</td>';
                     rows += '<td>' + json[i].phone + '</td>';
                     rows += '<td><input type="button" onclick="PersonDeleteID(' + json[i].id + ')" value="Delete" /></td>';
-//                    rows += '<td><a href="#" class="btndelete" data-personid="' + json[i].id + '">Delete</a></td>';
+                    rows += '<td><a href="#" class="btndelete" data-personid="' + json[i].id + '">Delete</a></td>';
                     rows += '</tr>';
                 }
 
@@ -76,6 +76,9 @@ function PersonAdd()
                 PersonsRefresh();
             })
             .catch(function (error) {
+                //alert(document.getElementById("PersonFirstName").value);
+                //alert(document.getElementById("PersonLastName").value);
+                //alert(document.getElementById("PersonPhoneNumber").value);
                 document.getElementById("PersonFirstName").value = "";
                 document.getElementById("PersonLastName").value = "";
                 document.getElementById("PersonPhoneNumber").value = "";
@@ -84,24 +87,24 @@ function PersonAdd()
 }
 
 function PersonDelete(){
-    var id = document.getElementById("PersonID").value;
-    fetch("api/person"+id, {
-        method: "delete",
-    })
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (json) {
-                document.getElementById("PersonFirstName").value = "";
-                document.getElementById("PersonLastName").value = "";
-                document.getElementById("PersonPhoneNumber").value = "";
-                PersonsRefresh();
-            })
-            .catch(function (error) {
-                document.getElementById("PersonFirstName").value = "";
-                document.getElementById("PersonLastName").value = "";
-                document.getElementById("PersonPhoneNumber").value = "";
-                alert("Person not found!");
-            });
+//    var id = document.getElementById("PersonID").value;
+//    fetch("api/person"+id, {
+//        method: "delete",
+//    })
+//            .then(function (response) {
+//                return response.json();
+//            })
+//            .then(function (json) {
+//                document.getElementById("PersonFirstName").value = "";
+//                document.getElementById("PersonLastName").value = "";
+//                document.getElementById("PersonPhoneNumber").value = "";
+//                PersonsRefresh();
+//            })
+//            .catch(function (error) {
+//                document.getElementById("PersonFirstName").value = "";
+//                document.getElementById("PersonLastName").value = "";
+//                document.getElementById("PersonPhoneNumber").value = "";
+//                alert("Person not found!");
+//            });
 
 }

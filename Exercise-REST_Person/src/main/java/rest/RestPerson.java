@@ -89,17 +89,17 @@ public class RestPerson
         JsonObject body = new JsonParser().parse(content).getAsJsonObject();
         Persons person = fp.getPerson(body.get("id").getAsLong());
         
-        if(body.has("firstName"))
+        if(body.has("fName"))
         {
-            person.setfName(body.get("firstName").getAsString());
+            person.setfName(body.get("fName").getAsString());
         }
-        if(body.has("lastName"))
+        if(body.has("lName"))
         {
-            person.setlName(body.get("lastName").getAsString());
+            person.setlName(body.get("lName").getAsString());
         }
-        if(body.has("phoneNumber"))
+        if(body.has("phone"))
         {
-            person.setPhone(body.get("phoneNumber").getAsString());
+            person.setPhone(body.get("phone").getAsString());
         }       
 
         fp.editPerson(person);
